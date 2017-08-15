@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout_15_07_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-nk-ZWB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="w4d-5V-wuD">
+                                <rect key="frame" x="102" y="28" width="170" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DFq-Hr-t4c"/>
+                                    <constraint firstAttribute="width" constant="170" id="L7w-v0-lep"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crn-1Y-F0h">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ozj-Mc-rUM"/>
+                                </constraints>
+                                <state key="normal" title="Next Question">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextQuestionClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvR-oq-mot"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the name of this city in the United States with a bell in the near middle of the city?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEQ-5e-59V">
+                                <rect key="frame" x="20" y="108" width="335" height="479"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w4d-5V-wuD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="27B-Ts-Alc"/>
+                            <constraint firstItem="hT9-nk-ZWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9FM-jo-6Ls"/>
+                            <constraint firstAttribute="trailing" secondItem="YEQ-5e-59V" secondAttribute="trailing" constant="20" id="Cen-ks-3sr"/>
+                            <constraint firstItem="hT9-nk-ZWB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E42-4g-Fec"/>
+                            <constraint firstItem="YEQ-5e-59V" firstAttribute="top" secondItem="w4d-5V-wuD" secondAttribute="bottom" constant="20" id="PGk-x6-0Nr"/>
+                            <constraint firstAttribute="bottom" secondItem="crn-1Y-F0h" secondAttribute="bottom" constant="20" id="Q51-xD-yLc"/>
+                            <constraint firstItem="YEQ-5e-59V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Yfs-zI-cs7"/>
+                            <constraint firstAttribute="trailing" secondItem="hT9-nk-ZWB" secondAttribute="trailing" id="ZKR-3G-5Xx"/>
+                            <constraint firstItem="crn-1Y-F0h" firstAttribute="top" secondItem="YEQ-5e-59V" secondAttribute="bottom" constant="20" id="lwW-Sp-gW6"/>
+                            <constraint firstItem="w4d-5V-wuD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pOz-h4-JOr"/>
+                            <constraint firstItem="crn-1Y-F0h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rLG-xX-nKZ"/>
+                            <constraint firstAttribute="bottom" secondItem="hT9-nk-ZWB" secondAttribute="bottom" id="wh2-Wy-zIQ"/>
+                            <constraint firstAttribute="trailing" secondItem="crn-1Y-F0h" secondAttribute="trailing" constant="20" id="yTl-1U-P6m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="YEQ-5e-59V" id="ruJ-5d-WTV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Earth" width="2560" height="1600"/>
+        <image name="logo" width="227" height="79"/>
+    </resources>
 </document>
